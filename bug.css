@@ -1,0 +1,18 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors:
+
+```css
+#myElement {
+  color: blue;
+}
+
+.myElement {
+  color: red;
+}
+
+#myElement.myElement {
+  color: green;
+}
+
+```
+
+The intent is to apply a green color to elements with both the id `myElement` and the class `myElement`, but the resulting color may unexpectedly be blue or red depending on the order of the stylesheets or the browser's behavior in handling conflicting styles. The issue lies in the unusual combination of ID and class selectors, and how the browser's specificity rules handle them.
